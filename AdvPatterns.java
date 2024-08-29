@@ -59,6 +59,7 @@ public class AdvPatterns {
 
         // ------ 4. Palinndromic pattern ------
         // for(int i=1; i<=n; i++){
+            //  space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
@@ -74,6 +75,7 @@ public class AdvPatterns {
         // ------ 5. Dimond pattern ------
             // upper part
         // for(int i=1; i<=n; i++){
+            // space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
@@ -84,6 +86,7 @@ public class AdvPatterns {
         // }
             //  lower part
         // for(int i=n; i>=1; i--){
+            // space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
