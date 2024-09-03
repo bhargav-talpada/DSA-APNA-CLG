@@ -3,13 +3,23 @@ public class AdvPatterns {
 
         int n = 5;
 
-        // ------ 1. butterfly pattern ------
-            //  upper part
+        // ------------ 1. butterfly pattern ------------
+        // *                 * 
+        // * *             * * 
+        // * * *         * * * 
+        // * * * *     * * * * 
+        // * * * * * * * * * * 
+        // * * * * * * * * * * 
+        // * * * *     * * * * 
+        // * * *         * * * 
+        // * *             * * 
+        // *                 *
+        //     //  upper part
         // for(int i=1; i<=n; i++){
         //     for(int j=1; j<=i; j++){
         //         System.out.print("* ");
         //     }
-                // space
+        //         // space
         //     for(int j=1; j<=2*(n-i); j++){
         //         System.out.print("  ");
         //     }
@@ -18,12 +28,12 @@ public class AdvPatterns {
         //     }
         //     System.out.println();
         // }
-            // lower part
+        //     // lower part
         // for(int i=n; i>=1; i--){
         //     for(int j=1; j<=i; j++){
         //         System.out.print("* ");
         //     }
-                // space
+        //         // space
         //     for(int j=1; j<=2*(n-i); j++){
         //         System.out.print("  ");
         //     }
@@ -33,9 +43,14 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 2. solid rhombus ------
+        // ------------ 2. solid rhombus ------------
+    //           * * * * * 
+    //         * * * * *
+    //       * * * * *
+    //     * * * * *
+    //   * * * * *
         // for(int i=1; i<=n; i++){
-                // space
+        //         // space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
@@ -45,7 +60,12 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 3. number pyramid ------
+        // ------------ 3. number pyramid ------------
+        //     1 
+        //    2 2
+        //   3 3 3
+        //  4 4 4 4
+        // 5 5 5 5 5
         // for(int i=1; i<=n; i++){
         //     // space
         //     for(int j=1; j<=n-i; j++){
@@ -57,9 +77,14 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 4. Palinndromic pattern ------
+        // ------------ 4. Palinndromic pattern ------------
+        //         1 
+        //       2 1 2
+        //     3 2 1 2 3
+        //   4 3 2 1 2 3 4
+        // 5 4 3 2 1 2 3 4 5
         // for(int i=1; i<=n; i++){
-            //  space
+        //     //  space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
@@ -72,10 +97,20 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 5. Dimond pattern ------
-            // upper part
+        // ------------ 5. Dimond pattern ------------
+    //         * 
+    //       * * * 
+    //     * * * * * 
+    //   * * * * * * * 
+    // * * * * * * * * * 
+    // * * * * * * * * * 
+    //   * * * * * * * 
+    //     * * * * * 
+    //       * * * 
+    //         * 
+        //     // upper part
         // for(int i=1; i<=n; i++){
-            // space
+        //     // space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
@@ -84,9 +119,9 @@ public class AdvPatterns {
         //     }
         //     System.out.println();
         // }
-            //  lower part
+        //     //  lower part
         // for(int i=n; i>=1; i--){
-            // space
+        //     // space
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
         //     }
@@ -96,7 +131,12 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 6. hollow Rhombus ------
+        // ------------ 6. hollow Rhombus ------------
+        //         * * * * * 
+        //       *       * 
+        //     *       * 
+        //   *       * 
+        // * * * * * 
         // for(int i=1; i<=n; i++){
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print("  ");
@@ -112,7 +152,12 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 7. half pyramid ------
+        // ------------ 7. half pyramid ------------
+        //     1 
+        //    1 2
+        //   1 2 3
+        //  1 2 3 4
+        // 1 2 3 4 5
         // for(int i=1; i<=n; i++){
         //     for(int j=1; j<=n-i; j++){
         //         System.out.print(" ");
@@ -123,7 +168,12 @@ public class AdvPatterns {
         //     System.out.println();
         // }
 
-        // ------ 8. inverted half pyramid ------
+        // ------------ 8. inverted half pyramid ------------
+        // 1 1 1 1 1
+        // 2 2 2 2
+        // 3 3 3
+        // 4 4
+        // 5
         // for(int i=1; i<=n; i++){
         //     for(int j=n; j>=i; j--){
         //         System.out.print(i+ " ");
