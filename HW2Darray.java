@@ -6,44 +6,6 @@ public class HW2Darray {
         int n = sc.nextInt();
         int m = sc.nextInt();
 
-        // int[][] matrix = new int[n][m];
-
-        // for (int i = 0; i < n; i++) {
-        // for (int j = 0; j < m; j++) {
-        // matrix[i][j] = sc.nextInt();
-        // }
-        // }
-
-        // int rowStart = 0;
-        // int rowEnd = n-1;
-        // int colStart = 0;
-        // int colEnd = m-1;
-
-        // while (rowStart <= rowEnd && colStart <= colEnd) {
-
-        // for (int col = colStart; col <= colEnd; col++) {
-        // System.out.println(matrix[rowStart][col] + " ");
-        // }
-        // rowStart++;
-
-        // for (int row = rowStart; row <= rowEnd; row++) {
-        // System.out.println(matrix[row][colEnd] + " ");
-        // }
-        // colEnd--;
-
-        // for (int col = colEnd; col >= colStart; col--) {
-        // System.out.println(matrix[rowEnd][col]);
-        // }
-        // rowEnd--;
-
-        // for (int row = rowEnd; row >= rowStart; row--) {
-        // System.out.println(matrix[row][colStart]);
-        // }
-        // colStart++;
-
-        // System.out.println();
-        // }
-
         int matrix[][] = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -88,3 +50,5 @@ public class HW2Darray {
 
     }
 }
+// 1 5 7 9 10 11 21 41 70 105 95 81 79 70 40 15 9 6 10 12 13 20 32 68 63 59 55
+// 25 29 30 29
