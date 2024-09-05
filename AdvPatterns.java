@@ -188,15 +188,33 @@ public class AdvPatterns {
         //   3 3 3
         //    4 4
         //     5
-        for(int i=1; i<=n; i++){
-            for(int j=n-i; j<=3; j++){
+        // for(int i=1; i<=n; i++){
+        //     for(int j=n-i; j<=3; j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int j=n; j>=i; j--){
+        //         System.out.print(i+ " ");
+        //     }
+        //     System.out.println();
+        // }
+
+        // ------------ 10. Pascal's Pyramid ------------
+        //     1
+        //    1 1
+        //   1 2 1
+        //  1 3 3 1
+        // 1 4 6 4 1
+        for(int i=0; i<n; i++){
+            int c=1;
+            for(int j=1; j<=n-i; j++){
                 System.out.print(" ");
             }
-            for(int j=n; j>=i; j--){
-                System.out.print(i+ " ");
+            for(int j=0; j<=i; j++){
+                System.out.print(c+ " ");
+                c = c * (i - j) / (j + 1);
             }
             System.out.println();
-        }
+        } 
 
     }
 }
