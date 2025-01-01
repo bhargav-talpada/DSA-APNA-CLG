@@ -1,17 +1,19 @@
-let matrix = [
-    [11, 2, 4],
-    [4, 5, 6],
-    [10, 8, -12]
-];
-
-let primaryDiagonalSum = 0;
-let secondaryDiagonalSum = 0;
-
-for (let i = 0; i < matrix.length; i++) {
-    primaryDiagonalSum += matrix[i][i]; // elements from top-left to bottom-right
-    secondaryDiagonalSum += matrix[i][matrix.length - 1 - i]; // elements from top-right to bottom-left
+function permutation(str, permu, result) {
+    if (str.length === 0) {
+        result.push(permu); // Add the current permutation to the result array
+        return;
+    }
+    for (let i = 0; i < str.length; i++) {
+        let currChar = str.charAt(i); 
+        let newStr = str.substring(0, i) + str.substring(i + 1); // Corrected method name
+        permutation(newStr, permu + currChar, result); // Pass the result array in the recursive call
+    }
 }
 
-let diagonalDifference = Math.abs(primaryDiagonalSum - secondaryDiagonalSum);
+function getPermutations(str) {
+    let result = [];
+    permutation(str, "", result); // Start the recursion with an empty permutation string
+    return result;
+}
 
-console.log(diagonalDifference); // Output will be 15
+console.log(getPermutations("ABC")); // Output: ["ABC", "ACB", "BAC", "BCA", "CAB", "CBA"]
