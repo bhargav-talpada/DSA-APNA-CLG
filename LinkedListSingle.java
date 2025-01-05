@@ -21,11 +21,14 @@ public class LinkedListSingle {
     public void addFirst(String data) {
         Node newNode = new Node(data);
         if (head == null) {
+            // if head is null then head become newNode
             head = newNode;
             return;
         }
 
+        // then we point next of newNode is head
         newNode.next = head;
+        // head becomes newNode means first node
         head = newNode;
     } 
 
@@ -37,12 +40,15 @@ public class LinkedListSingle {
             return;
         }
 
+        // currNode means first node because head is first node
         Node currNode = head;
+
+        // we traverse linkelist from first node to end till we found currNode next is null
         while (currNode.next != null) {
-            currNode = currNode.next;
+            currNode = currNode.next;  // we found last node(null) and becomes currnode next
         }
 
-        currNode.next = newNode;
+        currNode.next = newNode;  // then currnode next becomes newnode means add newnode at last of LL
     }
 
     // print
@@ -67,7 +73,7 @@ public class LinkedListSingle {
         }
 
         size--;
-        head = head.next;
+        head = head.next; // we point head is head.next measn 2 node become head and 1 node remove
     }
 
     // delete last
@@ -77,19 +83,23 @@ public class LinkedListSingle {
             return;
         }
         size--;
+
+        // if linkedlist have only 1 node then remove first node
         if (head.next == null) {
-            head = null;
+            head = null; 
             return;
         }
 
-        Node secondLast = head;
-        Node lastNode = head.next;
+        Node secondLast = head; // first secoundLast node is our head
+        Node lastNode = head.next; 
+
+        // we traverse from first to last node or till we found lastnode.next is null
         while (lastNode.next != null) {
-            lastNode = lastNode.next;
+            lastNode = lastNode.next; 
             secondLast = secondLast.next;
         }
 
-        secondLast.next = null;
+        secondLast.next = null;  // remove the last node
     }
 
     public int getSize(){

@@ -1,11 +1,7 @@
-let nums = [1,2,3,4]
-let c = 0;
-nums.sort((a,b) => a - b);
+let l1 = [2,4,3], l2 = [5,6,4]
 
-for(let i = 0; i < nums.length; i++) {
-    if (nums[i] === nums[i+1]) {
-        c++;
-    }
-}
-
-console.log(c>=1)
+let newL1 = parseInt(l1.reverse().join(''))
+let newL2 = parseInt(l2.reverse().join(''))
+let sum = newL1 + newL2
+let newArr = sum.toString().split('').reverse().map(Number)
+console.log((parseInt(l1.reverse().join('')) + parseInt(l2.reverse().join(''))).toString().split('').reverse().map(Number))
