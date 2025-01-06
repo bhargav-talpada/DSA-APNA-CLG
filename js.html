@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        // const randomColor = () => {
+        //     const hex = '0123456789ABCDEF'
+        //     let color = '#'
+        //     for (let i = 0; i < 6; i++) {
+        //         color += hex[Math.floor(Math.random() * 16)]
+        //     }
+        //     return color;
+        // }
+
+        // let intervalId;
+        // const startChangeColor = () => {
+        //     if (!intervalId) {
+        //         intervalId = setInterval(function(){
+        //         document.body.style.backgroundColor = randomColor();
+        //         }, 1000)
+        //     }
+            
+        // }
+
+        // const stopChangeColor = () => {
+        //     clearInterval(intervalId)
+        //     intervalId = null;
+        // }
+        
+        // document.querySelector('#start').addEventListener('click', startChangeColor)
+
+        // document.querySelector('#stop').addEventListener('click', stopChangeColor)
+
+        const reqUrl = 'https://api.github.com/users/bhargav-talpada'
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', reqUrl)
+        xhr.onreadystatechange = function() {
+            console.log(xhr.readyState)
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                console.log(data)
+                console.log(data.name)
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+</html>
