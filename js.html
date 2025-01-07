@@ -1,55 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>chai aur javascript</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <script>
-        // const randomColor = () => {
-        //     const hex = '0123456789ABCDEF'
-        //     let color = '#'
-        //     for (let i = 0; i < 6; i++) {
-        //         color += hex[Math.floor(Math.random() * 16)]
-        //     }
-        //     return color;
-        // }
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    document.getElementById('orange').onclick = function(){
+        document.body.style.backgroundColor = 'orange'
+    }
+    document.getElementById('green').onclick = function(){
+        document.body.style.backgroundColor = 'green'
+    }
 
-        // let intervalId;
-        // const startChangeColor = () => {
-        //     if (!intervalId) {
-        //         intervalId = setInterval(function(){
-        //         document.body.style.backgroundColor = randomColor();
-        //         }, 1000)
-        //     }
-            
-        // }
-
-        // const stopChangeColor = () => {
-        //     clearInterval(intervalId)
-        //     intervalId = null;
-        // }
-        
-        // document.querySelector('#start').addEventListener('click', startChangeColor)
-
-        // document.querySelector('#stop').addEventListener('click', stopChangeColor)
-
-        const reqUrl = 'https://api.github.com/users/bhargav-talpada'
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', reqUrl)
-        xhr.onreadystatechange = function() {
-            console.log(xhr.readyState)
-            if (xhr.readyState === 4) {
-                const data = JSON.parse(this.responseText)
-                console.log(data)
-                console.log(data.name)
-            }
-        }
-        xhr.send()
-    </script>
-</body>
+    function clickHandler(color) {
+        document.body.style.backgroundColor = `${color}`
+    }
+  </script>
 </html>

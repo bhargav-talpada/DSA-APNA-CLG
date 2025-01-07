@@ -1,7 +1,11 @@
-let l1 = [2,4,3], l2 = [5,6,4]
+let nums1 = [1,2], nums2 = [3, 4]
 
-let newL1 = parseInt(l1.reverse().join(''))
-let newL2 = parseInt(l2.reverse().join(''))
-let sum = newL1 + newL2
-let newArr = sum.toString().split('').reverse().map(Number)
-console.log((parseInt(l1.reverse().join('')) + parseInt(l2.reverse().join(''))).toString().split('').reverse().map(Number))
+let arr = [...nums1, ...nums2].sort((a, b) => a - b);
+let mid = Math.floor(arr.length / 2);
+if (arr.length % 2 === 0) {
+    console.log( (arr[mid] + arr[mid-1]) / 2);
+}
+else {
+    console.log( arr[mid])
+}
+console.log(arr[mid])
