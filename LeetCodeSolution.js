@@ -1,11 +1,10 @@
-let nums1 = [1,2], nums2 = [3, 4]
-
-let arr = [...nums1, ...nums2].sort((a, b) => a - b);
-let mid = Math.floor(arr.length / 2);
-if (arr.length % 2 === 0) {
-    console.log( (arr[mid] + arr[mid-1]) / 2);
+let words = ["a", "aba", "ababa", "aa"];
+let c = 0;
+for(let i=0; i<words.length-1; i++) {
+    for(let j=i+1; i<words.length; j++) {
+        if (words[j].startsWith(words[i] && words[j].endsWith(words[i]))) {
+            c++;
+        }
+    }
 }
-else {
-    console.log( arr[mid])
-}
-console.log(arr[mid])
+console.log(c)
